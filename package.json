@@ -1,0 +1,33 @@
+{
+  "name": "electron-auto-update-example",
+  "version": "1.0.1",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaviSuram6022/demo5.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --publish always",
+    "electron-build": "ng build --prod && electron .",
+    "dist": "electron-builder --win --x64 --publish never",
+    "deploy-all": "electron-builder build  --win --publish always"
+  },
+  "appId": "com.example.ElectronAutoUpdate",
+  "publish":{
+    "provider": "github",
+    "token": "ad2329457120454d24762a40128297c61b467053"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.13",
+    "electron-builder": "^20.44.4"
+  },
+  "dependencies": {
+    "electron-updater": "^4.2.0"
+  }
+}
